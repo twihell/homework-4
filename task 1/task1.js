@@ -5,9 +5,7 @@
 
 
 function arrayCalculator(from, to) {
-    if (arguments.length === 0 || arguments.length === 1 || arguments.length > 2) {
-        return 'error';
-    } else if (arguments.length === 2) {
+    if (arguments.length === 2) {
         let evenNumber = 0;
         let oddNumber = 0;
         for (let i = from; i <= to; i++) {
@@ -18,10 +16,12 @@ function arrayCalculator(from, to) {
             }
         }
         return [evenNumber, oddNumber];
+    } else {
+        return 'error';
     }
 }
 
 console.log(arrayCalculator(4, 10));
-// console.log(arrayCalculator());
-// console.log(arrayCalculator(2));
-// console.log(arrayCalculator(2, 6, 8));
+console.log(arrayCalculator());
+console.log(arrayCalculator(2));
+console.log(arrayCalculator(2, 6, 8));
